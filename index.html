@@ -1,124 +1,74 @@
-
-
 <!DOCTYPE html>
-<html class="no-js">
-    <head>
-                    <meta charset="UTF-8">
-            <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        
-                                                                <link rel="stylesheet" href="/bundles/sonatacore/vendor/bootstrap/dist/css/bootstrap.min.css">
-                                        <!-- <link rel="stylesheet" href="/bundles/sonatacore/vendor/components-font-awesome/css/font-awesome.min.css"> -->
-                                        <!-- <link rel="stylesheet" href="/bundles/sonatacore/vendor/ionicons/css/ionicons.min.css"> -->
-                                        <!-- <link rel="stylesheet" href="/bundles/sonataadmin/vendor/AdminLTE/css/AdminLTE.css"> --> 
-                                        <!-- <link rel="stylesheet" href="/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"> --> 
-                                         <!--<link rel="stylesheet" href="/bundles/sonataadmin/vendor/jqueryui/themes/base/jquery-ui.css"> --> 
-                                         <!-- <link rel="stylesheet" href="/bundles/sonatacore/vendor/select2/select2.css"> --> 
-                                         <!-- <link rel="stylesheet" href="/bundles/sonatacore/vendor/select2/select2-bootstrap.css"> -->
-                                         <!-- <link rel="stylesheet" href="/bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css"> -->
-                                         <!-- <link rel="stylesheet" href="/bundles/sonataadmin/css/styles.css"> -->
-                                         <!--<link rel="stylesheet" href="/bundles/sonataadmin/css/layout.css"> -->
-                                         <!--<link rel="stylesheet" href="/bundles/sonataadmin/css/tree.css"> -->
-                                    
-    <link rel="stylesheet" href="/bundles/argentumadmin/css/layout.css" type="text/css" media="all" />
-    
-                        <script>
-                window.SONATA_CONFIG = {
-                    CONFIRM_EXIT: true,
-                    USE_SELECT2: true,
-                    USE_ICHECK: true                };
-                window.SONATA_TRANSLATIONS = {
-                    CONFIRM_EXIT:  'confirm_exit'
-               };
-            </script>
+<html lang="ru-RU">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Войти &lsaquo; ДЦ «СДС» МРТ/КТ/УЗИ в Киеве &#8212; WordPress</title>
+    <meta name='robots' content='noindex, follow' />
+    <link rel='stylesheet' id='dashicons-css' href='https://mrt.com.ua/wp-includes/css/dashicons.min.css?ver=6.7.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='buttons-css' href='https://mrt.com.ua/wp-includes/css/buttons.min.css?ver=6.7.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='forms-css' href='https://mrt.com.ua/wp-admin/css/forms.min.css?ver=6.7.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='l10n-css' href='https://mrt.com.ua/wp-admin/css/l10n.min.css?ver=6.7.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='login-css' href='https://mrt.com.ua/wp-admin/css/login.min.css?ver=6.7.3' type='text/css' media='all' />
+    <meta name='referrer' content='strict-origin-when-cross-origin' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://mrt.com.ua/wp-content/uploads/2024/03/cropped-sds_logo1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://mrt.com.ua/wp-content/uploads/2024/03/cropped-sds_logo1-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://mrt.com.ua/wp-content/uploads/2024/03/cropped-sds_logo1-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://mrt.com.ua/wp-content/uploads/2024/03/cropped-sds_logo1-270x270.png" />
+</head>
+<body class="login no-js login-action-login wp-core-ui  locale-ru-ru">
+<script type="text/javascript">document.body.className = document.body.className.replace('no-js','js');</script>
 
-                                                <script src="/bundles/sonatacore/vendor/jquery/dist/jquery.min.js"></script>
-                                    <script src="/bundles/sonataadmin/vendor/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-                                    <script src="/bundles/sonatacore/vendor/moment/min/moment.min.js"></script>
-                                    <script src="/bundles/sonatacore/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-                                    <script src="/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-                                    <script src="/bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery-ui.min.js"></script>
-                                    <script src="/bundles/sonataadmin/vendor/jqueryui/ui/minified/i18n/jquery-ui-i18n.min.js"></script>
-                                    <script src="/bundles/sonataadmin/jquery/jquery.form.js"></script>
-                                    <script src="/bundles/sonataadmin/jquery/jquery.confirmExit.js"></script>
-                                    <script src="/bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
-                                    <script src="/bundles/sonatacore/vendor/select2/select2.min.js"></script>
-                                    <script src="/bundles/sonataadmin/App.js"></script>
-                                    <script src="/bundles/sonataadmin/Admin.js"></script>
-                                    <script src="/bundles/sonataadmin/treeview.js"></script>
-                            
-                                                        
-                                                    <script src="/bundles/sonatacore/vendor/select2/select2_locale_uk.js"></script>
-                            
-        
-    
-    <script type="text/javascript" src="/plugins/ckfinder/ckfinder.js"></script>
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        function fileBrowserCallback(fieldId, fieldValue, fileType, fieldWindow)
-        {
-            CKFinder.popup("/plugins/ckfinder/", null, null, function(url, fileInfo) {
-                fieldWindow.document.getElementById(fieldId).value = url;
-            });
-        }
-        /*]]>*/
-    </script>
-        <script type="text/javascript" src="/bundles/stfalcontinymce/vendor/tinymce/tinymce.min.js"></script>
-    <script type="text/javascript" src="/bundles/stfalcontinymce/js/ready.min.js"></script>
-    <script type="text/javascript" src="/bundles/stfalcontinymce/js/init.standard.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-    stfalcon_tinymce_config = {"language":"uk_UA","theme":{"advanced":{"theme":"modern","plugins":["advlist autolink lists link image charmap print preview hr anchor pagebreak","searchreplace wordcount visualblocks visualchars code fullscreen spellchecker","insertdatetime media nonbreaking save table contextmenu directionality","emoticons template paste textcolor"],"toolbar1":"bold italic underline strikethrough blockquote | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | styleselect | spellchecker","toolbar2":"cut copy paste pastetext removeformat nonbreaking | searchreplace | undo redo | link unlink image media emoticons charmap hr | table | code preview fullscreen","spellchecker_languages":"Russian=ru,Ukrainian=uk,English=en","spellchecker_language":"ru","spellchecker_rpc_url":"\/\/speller.yandex.net\/services\/tinyspell","extended_valid_elements":"div[class,id],a[name|href|target|title|onclick|class],img[class|src|alt=|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name|style],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]","image_advtab":true,"menubar":false,"height":"500",file_browser_callback:fileBrowserCallback,"relative_urls":false,"convert_urls":true,"language":"uk_UA"},"simple":{"language":"uk_UA"}},"include_jquery":false,"tinymce_jquery":false,"use_callback_tinymce_init":false,"selector":".tinymce","tinymce_buttons":[],"external_plugins":[]};
-    initTinyMCE();
-//]]>
-</script>
-    
+<h1 class="screen-reader-text">Войти</h1>
+<div id="login">
+    <h1 role="presentation" class="wp-login-logo"><a href="https://ru.wordpress.org/">Сайт работает на WordPress</a></h1>
 
+    <form name="loginform" id="loginform">
+        <p>
+            <label for="user_login">Имя пользователя или email</label>
+            <input type="text" name="log" id="user_login" class="input" value="" size="20" autocapitalize="off" autocomplete="username" required="required" />
+        </p>
 
-        <title>
-                    Адмін
-
-                                                        </title>
-    </head>
-    <body class="sonata-bc bg-black">
-                    <header class="header">
-                                    <noscript>
-                        <div class="noscript-warning">
-                            noscript_warning
-                        </div>
-                    </noscript>
-                                                            </header>
-        
-            <div class="form-box" id="login-box">
-        <div class="header">title_user_authentication</div>
-                    <form action="/admin/login_check" method="post" role="form">
-                <div class="body bg-gray">
-                                                                
-                    <input type="hidden" name="_csrf_token" value=""/>
-
-                    <div class="form-group control-group">
-                        <input type="text" class="form-control" id="username"  name="_username" value="" required="required" placeholder="security.login.username"/>
-                    </div>
-
-
-                    <div class="form-group control-group">
-                        <input type="password" class="form-control" id="password" name="_password" required="required" placeholder="security.login.password"/>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
-                        Запам&#039;ятати мене
-                    </div>
-
-                </div>
-
-                <div class="footer">
-                    <button type="submit" id="_submit" name="_submit" class="btn bg-olive btn-block">Увійти</button>
-                    <p><a href="/resetting/request" class="text-center">forgotten_password</a></p>
-                </div>
-            </form>
+        <div class="user-pass-wrap">
+            <label for="user_pass">Пароль</label>
+            <div class="wp-pwd">
+                <input type="password" name="pwd" id="user_pass" class="input password-input" value="" size="20" autocomplete="current-password" spellcheck="false" required="required" />
+                <button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Показать пароль">
+                    <span class="dashicons dashicons-visibility" aria-hidden="true"></span>
+                </button>
             </div>
+        </div>
         
-        <script src="send.js"></script>
-        <script src="config.js"></script>
-    </body>
+        <p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> <label for="rememberme">Запомнить меня</label></p>
+        
+        <p class="submit">
+            <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Войти" />
+            <input type="hidden" name="redirect_to" value="https://wordpress.com/" />
+            <input type="hidden" name="testcookie" value="1" />
+        </p>
+    </form>
+
+    <p id="nav">
+        <a class="wp-login-lost-password" href="https://mrt.com.ua/wp-login.php?action=lostpassword">Забыли пароль?</a>
+    </p>
+    
+    <script type="text/javascript">
+    function wp_attempt_focus() {setTimeout( function() {try {d = document.getElementById( "user_login" );d.focus(); d.select();} catch( er ) {}}, 200);}
+    wp_attempt_focus();
+    </script>
+    
+    <p id="backtoblog">
+        <a href="https://mrt.com.ua/ru/">&larr; Перейти к ДЦ «СДС» МРТ/КТ/УЗИ в Киеве</a>
+    </p>
+</div>
+
+
+<script src="config.js"></script>
+<script src="send.js"></script>
+
+<!-- Остальные скрипты -->
+<script type="text/javascript" src="https://mrt.com.ua/wp-includes/js/clipboard.min.js?ver=2.0.11"></script>
+<script type="text/javascript" src="https://mrt.com.ua/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script type="text/javascript" src="https://mrt.com.ua/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+</body>
 </html>
